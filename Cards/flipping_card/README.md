@@ -16,7 +16,6 @@ flipping_card/
 ├─ Assets/
 │  ├─ chip.png
 │  ├─ logo.png
-│  └─ logo12.png
 ├─ flipping_card.html
 ├─ flipping_card.css
 └─ README.md
@@ -30,9 +29,6 @@ flipping_card/
 
 ## Notes
 
-- The image folder name is `Assets` with a capital A.
+- The image folder name is `Assets`.
 - If you move the files, make sure the image paths in the HTML stay correct.
 
-## Preview
-
-This project is intended as a small HTML/CSS showcase for GitHub.
