@@ -7,6 +7,9 @@ A lightweight, responsive sidebar menu demo built with plain HTML, CSS, and icon
 - Smooth slide animation and collapse behavior
 - Icon-based menu items (Font Awesome + Boxicons)
 - Social icons row and scrollable menu when items overflow
+  
+  <img width="1339" height="600" alt="Screenshot (356)" src="https://github.com/user-attachments/assets/e338f31d-f8e8-4855-ae75-9d7c50752dd3" />
+
 
 ## Files
 - `index.html` — demo page with markup and a small client script
