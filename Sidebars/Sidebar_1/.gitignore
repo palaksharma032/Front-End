@@ -1,0 +1,33 @@
+## OS files
+.DS_Store
+Thumbs.db
+
+## Editor
+.vscode/
+
+## Node
+node_modules/
+
+## Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Build
+dist/
+build/
+
+# Environment
+.env
+
+# Screenshots (ignore large exports but keep placeholders if any)
+screenshots/*.png
+screenshots/*.jpg
+screenshots/*.jpeg
+
+# IDE
+.idea/
+
+# Misc
+*.log
+tmp/
