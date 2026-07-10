@@ -20,10 +20,6 @@ build/
 # Environment
 .env
 
-# Screenshots (ignore large exports but keep placeholders if any)
-screenshots/*.png
-screenshots/*.jpg
-screenshots/*.jpeg
 
 # IDE
 .idea/
