@@ -34,3 +34,13 @@ A simple browser-based quiz game built with HTML, CSS, and vanilla JavaScript. T
 
 - The project does not require any build tools or external dependencies.
 - All logic runs directly in the browser.
+
+## Deploy to GitHub Pages
+
+This repository includes a workflow that deploys the `Quizgame` folder to GitHub Pages.
+
+1. Go to `Settings` -> `Pages` in this repository.
+2. Under **Build and deployment**, set **Source** to `GitHub Actions`.
+3. Push changes to `main` (or run the workflow manually from the **Actions** tab).
+4. Open the published site at:
+   - `https://palaksharma032.github.io/Front-End/`
