@@ -15,7 +15,7 @@ const progressBar = document.getElementById("progress");
 
 const quizQuestions = [
   {
-    question: "What is the only mammal capable of true flight?",
+    question: "Which is the only mammal capable of true flight?",
     answers: [
       { text: "Flying Squirel", correct: false },
       { text: "Bat", correct: true },
@@ -51,7 +51,7 @@ const quizQuestions = [
     ],
   },
   {
-    question: "What is largest desert on Earth?",
+    question: "Which is largest desert on Earth?",
     answers: [
       { text: "Sahara", correct: false },
       { text: "Gobi", correct: false },
