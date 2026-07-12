@@ -50,4 +50,4 @@ Login Form 1/
 
 ## License
 
-MIT Licence
+MIT License
