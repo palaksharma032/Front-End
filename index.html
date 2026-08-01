@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wanderly — Travel Slower, Remember Longer</title>
+<meta name="description" content="Wanderly is a slow-travel journey planner. Discover hand-picked routes, watch real footage from every stop, and plan a trip that lingers.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&family=Fraunces:ital,opsz,wght@0,9..144,500;1,9..144,500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="grain"></div>
+<div class="cursor-dot" id="cursorDot"></div>
+
+<!-- ================= NAV ================= -->
+<header class="nav" id="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand">
+      <span class="brand-mark">W</span>
+      <span class="brand-word">Wanderly</span>
+    </a>
+
+    <nav class="nav-links" id="navLinks">
+      <a href="#journeys">Journeys</a>
+      <a href="#why">Why us</a>
+      <a href="#stories">Stories</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#join" class="nav-cta">Plan a trip</a>
+    </nav>
+
+    <button class="burger" id="burger" aria-label="Toggle menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero" id="top">
+  <video class="hero-video" id="heroVideo" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+    <source src="videos/hero-loop.mp4" type="video/mp4">
+  </video>
+  <div class="hero-veil"></div>
+
+  <div class="hero-content">
+    <p class="eyebrow reveal">A slower kind of travel</p>
+    <h1 class="hero-title reveal">
+      Go where the<br>
+      <span class="hero-title-script">story lingers</span>
+    </h1>
+    <p class="hero-sub reveal">
+      Wanderly plots real, unrushed routes across the world's most alive places —
+      shot, walked, and tested by our own travelers, not stock photography.
+    </p>
+    <div class="hero-actions reveal">
+      <a href="#journeys" class="btn btn-solid">Explore journeys</a>
+      <button class="btn btn-ghost" id="muteToggle">
+        <span class="btn-ghost-icon" id="muteIcon">🔇</span> Unmute footage
+      </button>
+    </div>
+  </div>
+
+  <button class="scroll-cue" id="scrollCue" aria-label="Scroll down">
+    <span>Scroll</span>
+    <i></i>
+  </button>
+</section>
+
+<!-- ================= MARQUEE ================= -->
+<div class="marquee">
+  <div class="marquee-track">
+    <span>BALI</span><span>•</span><span>SANTORINI</span><span>•</span><span>KYOTO</span><span>•</span>
+    <span>PATAGONIA</span><span>•</span><span>ICELAND</span><span>•</span><span>MARRAKECH</span><span>•</span>
+    <span>BALI</span><span>•</span><span>SANTORINI</span><span>•</span><span>KYOTO</span><span>•</span>
+    <span>PATAGONIA</span><span>•</span><span>ICELAND</span><span>•</span><span>MARRAKECH</span><span>•</span>
+  </div>
+</div>
+
+<!-- ================= JOURNEY RAIL (signature element) ================= -->
+<section class="journeys" id="journeys">
+  <div class="section-head reveal">
+    <p class="eyebrow">01 — The route</p>
+    <h2>Six stops, one flight path</h2>
+    <p class="section-sub">Drag the rail, or just scroll. The path draws itself as you go —
+      the same way a boarding pass stacks up over a good year of travel.</p>
+  </div>
+
+  <svg class="flight-path" id="flightPath" viewBox="0 0 1600 200" preserveAspectRatio="none" aria-hidden="true">
+    <path id="flightPathLine" d="M 0 100 Q 200 20, 400 100 T 800 100 T 1200 100 T 1600 100" />
+    <g id="planeMarker" class="plane-marker">
+      <text x="0" y="6" font-size="26">✈</text>
+    </g>
+  </svg>
+
+  <div class="rail" id="rail">
+
+    <article class="dest-card reveal" data-video="videos/bali.mp4">
+      <video muted loop playsinline preload="none" poster="images/bali-poster.jpg"><source src="videos/bali.mp4" type="video/mp4"></video>
+      <div class="dest-veil"></div>
+      <span class="dest-index">01</span>
+      <div class="dest-info">
+        <h3>Bali, Indonesia</h3>
+        <p class="dest-tag">Rice terraces &amp; quiet coastlines</p>
+        <span class="dest-days">7–10 days</span>
+      </div>
+    </article>
+
+    <article class="dest-card reveal" data-video="videos/santorini.mp4">
+      <video muted loop playsinline preload="none" poster="images/santorini-poster.jpg"><source src="videos/santorini.mp4" type="video/mp4"></video>
+      <div class="dest-veil"></div>
+      <span class="dest-index">02</span>
+      <div class="dest-info">
+        <h3>Santorini, Greece</h3>
+        <p class="dest-tag">Whitewashed cliffs, slow sunsets</p>
+        <span class="dest-days">5–7 days</span>
+      </div>
+    </article>
+
+    <article class="dest-card reveal" data-video="videos/kyoto.mp4">
+      <video muted loop playsinline preload="none" poster="images/kyoto-poster.jpg"><source src="videos/kyoto.mp4" type="video/mp4"></video>
+      <div class="dest-veil"></div>
+      <span class="dest-index">03</span>
+      <div class="dest-info">
+        <h3>Kyoto, Japan</h3>
+        <p class="dest-tag">Temples, tea houses, maple light</p>
+        <span class="dest-days">6–8 days</span>
+      </div>
+    </article>
+
+    <article class="dest-card reveal" data-video="videos/patagonia.mp4">
+      <video muted loop playsinline preload="none" poster="images/patagonia-poster.jpg"><source src="videos/patagonia.mp4" type="video/mp4"></video>
+      <div class="dest-veil"></div>
+      <span class="dest-index">04</span>
+      <div class="dest-info">
+        <h3>Patagonia, Chile</h3>
+        <p class="dest-tag">Glaciers &amp; wind-carved granite</p>
+        <span class="dest-days">9–12 days</span>
+      </div>
+    </article>
+
+    <article class="dest-card reveal" data-video="videos/iceland.mp4">
+      <video muted loop playsinline preload="none" poster="images/iceland-poster.jpg"><source src="videos/iceland.mp4" type="video/mp4"></video>
+      <div class="dest-veil"></div>
+      <span class="dest-index">05</span>
+      <div class="dest-info">
+        <h3>Iceland</h3>
+        <p class="dest-tag">Black sand, hot springs, auroras</p>
+        <span class="dest-days">6–9 days</span>
+      </div>
+    </article>
+
+    <article class="dest-card reveal" data-video="videos/marrakech.mp4">
+      <video muted loop playsinline preload="none" poster="images/marrakech-poster.jpg"><source src="videos/marrakech.mp4" type="video/mp4"></video>
+      <div class="dest-veil"></div>
+      <span class="dest-index">06</span>
+      <div class="dest-info">
+        <h3>Marrakech, Morocco</h3>
+        <p class="dest-tag">Souks, spice, and terracotta light</p>
+        <span class="dest-days">4–6 days</span>
+      </div>
+    </article>
+
+  </div>
+
+  <p class="rail-hint">← drag to explore →</p>
+</section>
+
+<!-- ================= WHY US ================= -->
+<section class="why" id="why">
+  <div class="section-head reveal">
+    <p class="eyebrow">02 — Why Wanderly</p>
+    <h2>Built for people who travel to feel something</h2>
+  </div>
+
+  <div class="why-grid">
+    <div class="glass-card why-card reveal">
+      <span class="why-num">36</span>
+      <h3>Routes tested in person</h3>
+      <p>Every itinerary is walked by a Wanderly guide before it's published — no recycled blog copy.</p>
+    </div>
+    <div class="glass-card why-card reveal">
+      <span class="why-num">0</span>
+      <h3>Stock photography used</h3>
+      <p>Every frame you see on this site was filmed on the actual route, by the actual travelers.</p>
+    </div>
+    <div class="glass-card why-card reveal">
+      <span class="why-num">48h</span>
+      <h3>Human reply time</h3>
+      <p>A real trip designer answers your questions — not a script, not a chatbot.</p>
+    </div>
+    <div class="glass-card why-card reveal">
+      <span class="why-num">12</span>
+      <h3>Travelers per group, max</h3>
+      <p>Small enough that you'll remember everyone's name by day three.</p>
+    </div>
+  </div>
+</section>
+
+<!-- ================= STORIES / TESTIMONIALS ================= -->
+<section class="stories" id="stories">
+  <div class="section-head reveal">
+    <p class="eyebrow">03 — Field notes</p>
+    <h2>What the road said back</h2>
+  </div>
+
+  <div class="story-carousel reveal">
+    <div class="story-track" id="storyTrack">
+
+      <blockquote class="story-slide">
+        <p>“Wanderly's Kyoto route skipped every place I'd already seen on Instagram. It felt like being handed a friend's notebook, not a brochure.”</p>
+        <footer>— Aanya R., Kyoto route, 2025</footer>
+      </blockquote>
+
+      <blockquote class="story-slide">
+        <p>“I've booked trips through five different agencies. This is the first one where the video previews actually matched what I found when I landed.”</p>
+        <footer>— Marco D., Patagonia route, 2025</footer>
+      </blockquote>
+
+      <blockquote class="story-slide">
+        <p>“Small group, honest pacing, zero 6am forced wake-up calls. Santorini finally felt like a holiday instead of a checklist.”</p>
+        <footer>— Priya S., Santorini route, 2026</footer>
+      </blockquote>
+
+    </div>
+
+    <div class="story-dots" id="storyDots"></div>
+  </div>
+</section>
+
+<!-- ================= GALLERY ================= -->
+<section class="gallery" id="gallery">
+  <div class="section-head reveal">
+    <p class="eyebrow">04 — In motion</p>
+    <h2>A minute from the road</h2>
+    <p class="section-sub">Click any frame to watch it full-screen.</p>
+  </div>
+
+  <div class="gallery-grid" id="galleryGrid">
+    <button class="gallery-item span-2 reveal" data-video="videos/bali.mp4"><video muted loop playsinline preload="none" poster="images/bali-poster.jpg"><source src="videos/bali.mp4" type="video/mp4"></video><span class="gallery-label">Bali · rice terraces</span></button>
+    <button class="gallery-item reveal" data-video="videos/kyoto.mp4"><video muted loop playsinline preload="none" poster="images/kyoto-poster.jpg"><source src="videos/kyoto.mp4" type="video/mp4"></video><span class="gallery-label">Kyoto · dusk</span></button>
+    <button class="gallery-item reveal" data-video="videos/iceland.mp4"><video muted loop playsinline preload="none" poster="images/iceland-poster.jpg"><source src="videos/iceland.mp4" type="video/mp4"></video><span class="gallery-label">Iceland · coast</span></button>
+    <button class="gallery-item reveal" data-video="videos/marrakech.mp4"><video muted loop playsinline preload="none" poster="images/marrakech-poster.jpg"><source src="videos/marrakech.mp4" type="video/mp4"></video><span class="gallery-label">Marrakech · souk</span></button>
+    <button class="gallery-item span-2 reveal" data-video="videos/patagonia.mp4"><video muted loop playsinline preload="none" poster="images/patagonia-poster.jpg"><source src="videos/patagonia.mp4" type="video/mp4"></video><span class="gallery-label">Patagonia · trail</span></button>
+  </div>
+</section>
+
+<!-- ================= NEWSLETTER / JOIN ================= -->
+<section class="join" id="join">
+  <div class="glass-card join-card reveal">
+    <div class="join-copy">
+      <p class="eyebrow">05 — Stay in the loop</p>
+      <h2>We'll tell you when a route opens, not when a sale ends</h2>
+      <p>One short note a month. Real routes, real dates, real seats left — nothing else.</p>
+    </div>
+
+    <form class="join-form" id="joinForm" novalidate>
+      <div class="field">
+        <input type="text" id="joinName" placeholder=" " required autocomplete="name">
+        <label for="joinName">Your name</label>
+      </div>
+      <div class="field">
+        <input type="email" id="joinEmail" placeholder=" " required autocomplete="email">
+        <label for="joinEmail">Email address</label>
+      </div>
+      <button type="submit" class="btn btn-solid">Join the list</button>
+      <p class="form-msg" id="formMsg" role="status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="site-footer">
+  <div class="footer-top">
+    <a href="#top" class="brand">
+      <span class="brand-mark">W</span>
+      <span class="brand-word">Wanderly</span>
+    </a>
+    <p>Slow routes, honest footage, small groups. Six continents, one flight path at a time.</p>
+  </div>
+
+  <div class="footer-links">
+    <div>
+      <h4>Explore</h4>
+      <a href="#journeys">Journeys</a>
+      <a href="#why">Why us</a>
+      <a href="#stories">Stories</a>
+      <a href="#gallery">Gallery</a>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <a href="#">About</a>
+      <a href="#">Careers</a>
+      <a href="#">Press</a>
+    </div>
+    <div>
+      <h4>Follow</h4>
+      <a href="#">Instagram</a>
+      <a href="#">YouTube</a>
+      <a href="#">Pinterest</a>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <span>© 2026 Wanderly. A concept travel studio.</span>
+    <button class="to-top" id="toTop" aria-label="Back to top">↑ Top</button>
+  </div>
+</footer>
+
+<!-- ================= LIGHTBOX ================= -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightboxClose" aria-label="Close video">✕</button>
+  <video id="lightboxVideo" controls playsinline></video>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
