@@ -23,36 +23,6 @@ It serves as a practical record of my journey in building websites, understandin
 
 Rather than focusing on tutorials alone, this repository emphasises learning by building, experimenting with ideas and improving through implementation.
 
-## 🚀 Featured Project — Wanderly
-
-**Wanderly — Travel Slower, Remember Longer**
-
-A visually immersive travel journey planner designed around the idea of slow and meaningful travel.
-
-The website combines cinematic video backgrounds, destination showcases, interactive journey sections and animated visual elements to create an engaging browsing experience.
-
-### Highlights
-
-- Full-screen cinematic video hero section.
-- Custom navigation with responsive mobile menu.
-- Six destination showcases.
-- Interactive horizontal journey rail.
-- Animated SVG flight path.
-- Scroll-based reveal animations.
-- Destination video previews.
-- Interactive testimonial carousel.
-- Video gallery with full-screen lightbox.
-- Newsletter form with input validation.
-- Smooth scrolling and back-to-top interaction.
-
-### Technologies
-
-- HTML5
-- CSS3
-- JavaScript
-- Google Fonts
-
----
 
 ## 📂 Project Collection
 
